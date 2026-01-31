@@ -250,7 +250,7 @@ let setCookieConsentTheme = (theme) => {
   // Sync cookie consent modal with site's theme
   // The cookie consent library supports dark mode via the cc--darkmode class
   var htmlElement = document.documentElement;
-  
+
   if (theme === "dark") {
     htmlElement.classList.add("cc--darkmode");
   } else {
