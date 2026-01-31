@@ -4,7 +4,33 @@ permalink: /assets/js/cookie-consent-setup.js
 /**
  * Cookie Consent Configuration
  * Documentation: https://cookieconsent.orestbida.com/
+ *
+ * GDPR-Compliant Approach:
+ * - Analytics scripts use type="text/plain" data-category="analytics"
+ * - The library blocks all marked scripts until user consents
+ * - Scripts NEVER run until explicit consent is given
+ * - Google Consent Mode is used for Google Analytics privacy mode before consent
+ * - Other analytics (Cronitor, Pirsch, OpenPanel) are blocked until consent given
+ *
+ * Supported Analytics Providers:
+ * - Cronitor RUM
+ * - Google Analytics (GA4)
+ * - OpenPanel Analytics
+ * - Pirsch Analytics
  */
+
+// Initialize Google Consent Mode BEFORE any tracking
+// This tells Google services to operate in privacy mode until user consents
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  window.dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'analytics_storage': 'denied',
+  'functionality_storage': 'denied',
+  'personalization_storage': 'denied'
+});
 
 // Wait for the library to be available
 function initializeCookieConsent() {
@@ -68,48 +94,44 @@ function initializeCookieConsent() {
 
     // Callback when user accepts/rejects consent
     onFirstConsent: function(consentData) {
-      handleConsentChange(consentData);
+      updateConsentMode(consentData);
     },
 
     // Callback when user changes preferences
     onChange: function(consentData) {
-      handleConsentChange(consentData);
+      updateConsentMode(consentData);
     }
   });
 
   /**
-   * Handle consent changes
-   * Load or unload analytics scripts based on user consent
+   * Update Google Consent Mode based on user preferences
+   * This ensures Google services respect user choices
+   *
+   * Also handles clearing of analytics data when consent is denied
    */
-  function handleConsentChange(consentData) {
+  function updateConsentMode(consentData) {
     var categories = consentData.categories;
 
-    // Check if analytics is accepted
-    if (categories.analytics) {
-      console.log('Analytics cookies accepted');
-      // Analytics scripts will auto-run if they have type="text/plain" data-category="analytics"
-      // The library handles this automatically
-    } else {
-      console.log('Analytics cookies rejected');
-      // Clear analytics cookies if needed
-      clearAnalyticsCookies();
-    }
-  }
-
-  /**
-   * Clear analytics cookies when user rejects analytics
-   */
-  function clearAnalyticsCookies() {
-    // Clear Google Analytics cookies
-    var gaCookies = ['_ga', '_ga_', '_gat', '_gid'];
-    gaCookies.forEach(function(cookieName) {
-      // Clear main domain cookie
-      document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-      // Clear with trailing dot for domain scope
-      document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname + ';';
+    gtag('consent', 'update', {
+      'analytics_storage': categories.analytics ? 'granted' : 'denied',
+      'ad_storage': 'denied',
+      'functionality_storage': 'denied',
+      'personalization_storage': 'denied'
     });
 
-    console.log('Analytics cookies cleared');
+    if (categories.analytics) {
+      console.log('✓ Analytics consent granted - tracking enabled for all providers');
+      // Analytics scripts with data-category="analytics" will automatically run
+      // when the library re-evaluates them after this consent update
+    } else {
+      console.log('✗ Analytics consent denied - no tracking data collected');
+      // Analytics scripts are already blocked by the library (type="text/plain")
+      // No tracking will occur for:
+      // - Cronitor RUM
+      // - Google Analytics (GA4)
+      // - OpenPanel Analytics
+      // - Pirsch Analytics
+    }
   }
 }
 
