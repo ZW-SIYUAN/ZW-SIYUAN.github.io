@@ -106,11 +106,16 @@ function initializeCookieConsent() {
   /**
    * Update Google Consent Mode based on user preferences
    * This ensures Google services respect user choices
-   *
-   * Also handles clearing of analytics data when consent is denied
    */
   function updateConsentMode(consentData) {
-    var categories = consentData.categories;
+    // Handle both callback data structures
+    var categories = consentData.categories || consentData;
+
+    // Ensure categories is an object
+    if (!categories || typeof categories !== 'object') {
+      console.warn('Invalid consent data structure:', consentData);
+      return;
+    }
 
     gtag('consent', 'update', {
       'analytics_storage': categories.analytics ? 'granted' : 'denied',
@@ -120,11 +125,11 @@ function initializeCookieConsent() {
     });
 
     if (categories.analytics) {
-      console.log('✓ Analytics consent granted - tracking enabled for all providers');
+      console.debug('✓ Analytics consent granted - tracking enabled for all providers');
       // Analytics scripts with data-category="analytics" will automatically run
       // when the library re-evaluates them after this consent update
     } else {
-      console.log('✗ Analytics consent denied - no tracking data collected');
+      console.debug('✗ Analytics consent denied - no tracking data collected');
       // Analytics scripts are already blocked by the library (type="text/plain")
       // No tracking will occur for:
       // - Cronitor RUM
