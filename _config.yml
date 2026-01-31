@@ -403,7 +403,7 @@ enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
 enable_openpanel_analytics: false # enables Openpanel analytics (https://openpanel.dev/)
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
-enable_cookie_consent: false # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
+enable_cookie_consent: true # enables GDPR-compliant cookie consent dialog (https://github.com/orestbida/cookieconsent)
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
@@ -644,12 +644,12 @@ third_party_libraries:
     version: "2.1.8"
   vanilla-cookieconsent:
     integrity:
-      css: "sha256-YRbM1W+uzcEJCnDXZABbJkJFRlCqL+Q+8Sm5p4rIimc="
-      js: "sha256-2cXG+z5E5A8vGPXYM+Pk9dIDhzsb8HjxAfDAjOZmF5A="
+      css: "sha256-ygRrixsQlBByBZiOcJamh7JByO9fP+/l5UPtKNJmRsE="
+      js: "sha256-vG4vLmOB/AJbJ6awr7Wg4fxonG+fxAp4cIrbIFTvRXU="
     url:
       css: "https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.css"
       js: "https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.umd.js"
-    version: "3.0.1"
+    version: "3.1.0"
 
 # -----------------------------------------------------------------------------
 # Get external JSON data
