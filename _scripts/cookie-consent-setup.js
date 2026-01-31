@@ -64,8 +64,53 @@ function initializeCookieConsent() {
           }
         }
       }
+    },
+
+    // Callback when user accepts/rejects consent
+    onFirstConsent: function(consentData) {
+      handleConsentChange(consentData);
+    },
+
+    // Callback when user changes preferences
+    onChange: function(consentData) {
+      handleConsentChange(consentData);
     }
   });
+
+  /**
+   * Handle consent changes
+   * Load or unload analytics scripts based on user consent
+   */
+  function handleConsentChange(consentData) {
+    var categories = consentData.categories;
+
+    // Check if analytics is accepted
+    if (categories.analytics) {
+      console.log('Analytics cookies accepted');
+      // Analytics scripts will auto-run if they have type="text/plain" data-category="analytics"
+      // The library handles this automatically
+    } else {
+      console.log('Analytics cookies rejected');
+      // Clear analytics cookies if needed
+      clearAnalyticsCookies();
+    }
+  }
+
+  /**
+   * Clear analytics cookies when user rejects analytics
+   */
+  function clearAnalyticsCookies() {
+    // Clear Google Analytics cookies
+    var gaCookies = ['_ga', '_ga_', '_gat', '_gid'];
+    gaCookies.forEach(function(cookieName) {
+      // Clear main domain cookie
+      document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      // Clear with trailing dot for domain scope
+      document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname + ';';
+    });
+
+    console.log('Analytics cookies cleared');
+  }
 }
 
 // Initialize when the library is available
