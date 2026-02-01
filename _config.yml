@@ -422,39 +422,39 @@ enable_video_embedding: false # enables video embedding for bibtex entries. If f
 # Integrity hashes not provided by the libraries were generated using https://www.srihash.org/
 third_party_libraries:
   download: false # if true, download the versions of the libraries specified below and use the downloaded files
-  bootstrap-table:
+  bootstrap-table: # https://www.jsdelivr.com/package/npm/bootstrap-table
     integrity:
-      css: "sha256-JaS/dWPGNh+o+W4gouTJZxLEiR65CM7N1PKT9V3dAOk="
-      js: "sha256-mXG3k9cDnJ16KWUN9FlqPOYqEz4xFMcF6+rjj4jIeFw="
+      css: "sha256-uLMa6GgXUJn6/gA5k+tW0UO/pDuSG3WuZk0x5FA5CV0="
+      js: "sha256-xabDwMgd2Y9OMtbGJbCymALBRoc3hN3xYBDv+sfY4OY="
     url:
       css: "https://cdn.jsdelivr.net/npm/bootstrap-table@{{version}}/dist/bootstrap-table.min.css"
       js: "https://cdn.jsdelivr.net/npm/bootstrap-table@{{version}}/dist/bootstrap-table.min.js"
     version: "1.26.0"
-  chartjs:
+  chartjs: # https://www.jsdelivr.com/package/npm/chart.js
     integrity:
-      js: "sha256-cpF2zR7IqLQY7fWqJfDvJH3BdPizuDV5xUsKMbH/s8w="
+      js: "sha256-SERKgtTty1vsDxll+qzd4Y2cF9swY9BCq62i9wXJ9Uo="
     url:
       js: "https://cdn.jsdelivr.net/npm/chart.js@{{version}}/dist/chart.umd.min.js"
     version: "4.5.1"
-  d3:
+  d3: # https://www.jsdelivr.com/package/npm/d3
     integrity:
-      js: "sha256-XGjpZDJGoUrOALwnReN3EYqJPBFIscPekW1aXS8/AXo="
+      js: "sha256-8glLv2FBs1lyLE/kVOtsSw8OQswQzHr5IfwVj864ZTk="
     url:
       js: "https://cdn.jsdelivr.net/npm/d3@{{version}}/dist/d3.min.js"
     version: "7.9.0"
-  diff2html:
+  diff2html: # https://www.jsdelivr.com/package/npm/diff2html
     integrity:
-      css: "sha256-l1BqsaDIXoXptbGdS6N9N3xJU3MYo3FLYqVLPvhvFxo="
-      js: "sha256-rjT4sW8qFbJLUMGqW7YmqYJaLLlEDFPXj2nJKLFqxME="
+      css: "sha256-0+zA6bKx5chGbBneKb7QUv0IY0ddJYKezIWERu/e03I="
+      js: "sha256-ohEKCc7hV71UZtp3vgIQesgaC6orwfP+garIGDMUWY4="
     url:
       css: "https://cdn.jsdelivr.net/npm/diff2html@{{version}}/bundles/css/diff2html.min.css"
       js: "https://cdn.jsdelivr.net/npm/diff2html@{{version}}/bundles/js/diff2html-ui.min.js"
-    version: "3.4.55"
-  echarts:
+    version: "3.4.56"
+  echarts: # https://www.jsdelivr.com/package/npm/echarts
     integrity:
       js:
-        library: "sha256-sI2LwfLvJlRKLdLd4cDQYNwP0TjI5pK9JpUWSQqCHWg="
-        dark_theme: "sha256-5qhKqIgNLx/T2D3UJwqLLDfLUFMmKKLCHQ2gPJJqz5E="
+        library: "sha256-uqjf5+HZM2uY6Jhrp+IOoV582+oe9CpZ1ZR4Yy+kWh0="
+        dark_theme: "sha256-sm6Ui9w41++ZCWmIWDLC18a6ki72FQpWDiYTDxEPXwU="
     url:
       js:
         library: "https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/echarts.min.js"
@@ -463,52 +463,52 @@ third_party_libraries:
   google_fonts:
     url:
       fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&display=swap"
-  highlightjs:
+  highlightjs: # https://www.jsdelivr.com/package/npm/highlight.js
     integrity:
       css:
-        light: "sha256-eVrtxXdDhUNmrMPEKRfCogKDgLCcSKLxMfpTvaJQNUE="
-        dark: "sha256-V2K2OO4DaM+5uNqbZ7qJBVI8a4DXG7cNJY/kcFGAqms="
+        light: "sha256-Oppd74ucMR5a5Dq96FxjEzGF7tTw2fZ/6ksAqDCM8GY="
+        dark: "sha256-nyCNAiECsdDHrr/s2OQsp5l9XeY2ZJ0rMepjCT2AkBk="
     url:
       css:
         light: "https://cdn.jsdelivr.net/npm/highlight.js@{{version}}/styles/github.min.css"
         dark: "https://cdn.jsdelivr.net/npm/highlight.js@{{version}}/styles/github-dark.min.css"
     version: "11.11.1"
-  imagesloaded:
+  imagesloaded: # https://www.jsdelivr.com/package/npm/imagesloaded
     integrity:
       js: "sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
     url:
       js: https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js
     version: "5.0.0"
-  img-comparison-slider:
+  img-comparison-slider: # https://www.jsdelivr.com/package/npm/img-comparison-slider
     integrity:
-      css: "sha256-3qTIuuUWIFnnU3LpQMjqiXc0p09rvd0dmj+WkpQXSR8="
-      js: "sha256-EXHg3x1K4oIWdyohPeKX2ZS++Wxt/FRPH7Nl01nat1o="
-      map: "sha256-3wfqS2WU5kGA/ePcgFzJXl5oSN1QsgZI4/edprTgX8w="
+      css: "sha256-Lgj7ma3YMJ0mEFahPp6sGHgy3ddqd38v+ylUySwbmgA="
+      js: "sha256-bgEzUAC7r90FP4UdtOACXcPg+t1nfeylFUjW/pW0IWI="
+      map: "sha256-724qkg2h2sXE9DQMl4/Or2V5R+6Mfu18jwnMHwzejZY="
     url:
-      css: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/styles.min.css"
-      js: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/index.min.js"
+      css: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/styles.css"
+      js: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/index.js"
       map: "https://cdn.jsdelivr.net/npm/img-comparison-slider@{{version}}/dist/index.js.map"
-    version: "8.0.6"
-  jquery:
+    version: "8.0.7"
+  jquery: # https://www.jsdelivr.com/package/npm/jquery
     integrity:
-      js: "sha256-u24mYiPbOikG5BhOtqYw0HF2c3vF9VKU9X0TavhPkio="
+      js: "sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
     url:
       js: "https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
     version: "4.0.0"
-  leaflet:
+  leaflet: # https://www.jsdelivr.com/package/npm/leaflet
     integrity:
-      css: "sha256-q9ba7o845pMPFU+zcAll8rv+gC+fSovKsOoNQ6cynuQ="
-      js: "sha256-MgH13bFTTNqsnuEoqNPBLDaqxjGH+lCpqrukmXc8Ppg="
+      css: "sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      js: "sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       js_map: "sha256-YAoQ3FzREN4GmVENMir8vgHHypC0xfSK3CAxTHCqx1M="
     local:
       images: "images/"
     url:
-      css: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.min.css"
+      css: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.css"
       images: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/images/"
-      js: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.min.js"
+      js: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.js"
       js_map: "https://cdn.jsdelivr.net/npm/leaflet@{{version}}/dist/leaflet.js.map"
     version: "1.9.4"
-  lightbox2:
+  lightbox2: # https://www.jsdelivr.com/package/npm/lightbox2
     integrity:
       css: "sha256-uypRbsAiJcFInM/ndyI/JHpzNe6DtUNXaWEUWEPfMGo="
       js: "sha256-A6jI5V9s1JznkWwsBaRK8kSeXLgIqQfxfnvdDOZEURY="
@@ -516,22 +516,19 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/lightbox2@{{version}}/dist/css/lightbox.min.css"
       js: "https://cdn.jsdelivr.net/npm/lightbox2@{{version}}/dist/js/lightbox.min.js"
     version: "2.11.5"
-  mathjax:
+  mathjax: # https://www.jsdelivr.com/package/npm/mathjax
     integrity:
-      js: "sha256-rYX1LWTLLdlLVVVqwjJdHLJMAWMcPQW+UGrTJq2+RTs="
-    local:
-      fonts: "output/chtml/fonts/woff-v2/"
+      js: "sha256-vRVWcOQgIgZwqXAy0HojsQITgghn7o9e0qe7KDF/JO8="
     url:
-      fonts: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/output/chtml/fonts/woff-v2/"
-      js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/es5/tex-mml-chtml.js"
+      js: "https://cdn.jsdelivr.net/npm/mathjax@{{version}}/tex-mml-chtml.js"
     version: "4.1.0"
-  masonry:
+  masonry: # https://www.jsdelivr.com/package/npm/masonry-layout
     integrity:
       js: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
     url:
       js: "https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
     version: "4.2.2"
-  mdb:
+  mdb: # https://www.jsdelivr.com/package/npm/mdbootstrap
     integrity:
       css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
       css_map: "sha256-iYYMNfsJdVZjvsebJulg09miBXM4/GMTJgv1u5EZFFM="
@@ -543,42 +540,42 @@ third_party_libraries:
       js: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js"
       js_map: "https://cdn.jsdelivr.net/npm/mdbootstrap@{{version}}/js/mdb.min.js.map"
     version: "4.20.0"
-  medium_zoom:
+  medium_zoom: # https://www.jsdelivr.com/package/npm/medium-zoom
     integrity:
       js: "sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
     url:
       js: "https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
     version: "1.1.0"
-  mermaid:
+  mermaid: # https://www.jsdelivr.com/package/npm/mermaid
     integrity:
-      js: "sha256-TLB1L6OLkSVtl3+vG5VdlE98kJpkLbNOjxFPHsaScRw="
+      js: "sha256-0IMKbAVUbp7bj+IKj1RfPg3HxMMTTVhLrZwTqZ16ceA="
     url:
       js: "https://cdn.jsdelivr.net/npm/mermaid@{{version}}/dist/mermaid.min.js"
     version: "11.12.2"
-  photoswipe:
+  photoswipe: # https://www.jsdelivr.com/package/npm/photoswipe
     integrity:
       js: "sha256-VCBpdxvrNNxGHNuTdNqK9kPFkev2XY7DYzHdmgaB69Q="
     url:
       css: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe.min.css"
       js: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe.esm.min.js"
     version: "5.4.4"
-  photoswipe-lightbox:
+  photoswipe-lightbox: # https://www.jsdelivr.com/package/npm/photoswipe
     integrity:
       js: "sha256-uCw4VgT5DMdwgtjhvU9e98nT2mLZXcw/8WkaTrDd3RI="
     url:
       js: "https://cdn.jsdelivr.net/npm/photoswipe@{{version}}/dist/photoswipe-lightbox.esm.min.js"
     version: "5.4.4"
-  plotly:
+  plotly: # https://www.jsdelivr.com/package/npm/plotly.js
     integrity:
-      js: "sha256-AhTRNaQ5TZVbMdDGQJMTIGXeHpGWxh9CYVZ8Vp9aL1g="
+      js: "sha256-4rD3fugVb/nVJYUv5Ky3v+fYXoouHaBSP20WIJuEiWg="
     url:
       js: "https://cdn.jsdelivr.net/npm/plotly.js@{{version}}/dist/plotly.min.js"
     version: "3.3.1"
-  polyfill:
+  polyfill: # https://cdnjs.cloudflare.com/polyfill/
     url:
-      js: "https://cdnjs.cloudflare.com/polyfill/v{{version}}/polyfill.min.js?features=es6"
-    version: "3"
-  pseudocode:
+      js: "https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version={{version}}&features=es6"
+    version: "4.8.0"
+  pseudocode: # https://www.jsdelivr.com/package/npm/pseudocode
     integrity:
       css: "sha256-VwMV//xgBPDyRFVSOshhRhzJRDyBmIACniLPpeXNUdc="
       js: "sha256-aVkDxqyzrB+ExUsOY9PdyelkDhn/DfrjWu08aVpqNlo="
@@ -586,54 +583,42 @@ third_party_libraries:
       css: "https://cdn.jsdelivr.net/npm/pseudocode@{{version}}/build/pseudocode.min.css"
       js: "https://cdn.jsdelivr.net/npm/pseudocode@{{version}}/build/pseudocode.min.js"
     version: "2.4.1"
-  spotlight:
+  spotlight: # https://www.jsdelivr.com/package/npm/spotlight.js
     integrity:
       css: "sha256-Dsvkx8BU8ntk9Iv+4sCkgHRynYSQQFP6gJfBN5STFLY="
     url:
       css: "https://cdn.jsdelivr.net/npm/spotlight.js@{{version}}/dist/css/spotlight.min.css"
       js: "https://cdn.jsdelivr.net/npm/spotlight.js@{{version}}/dist/spotlight.bundle.min.js"
     version: "0.7.8"
-  swiper:
+  swiper: # https://www.jsdelivr.com/package/npm/swiper
     integrity:
-      css: "sha256-NjR7U5cS1w92OQzFJiK1xewvfivE5Hh9yHC/d6Y8L9w="
-      js: "sha256-pVdwHvBpM4KJQz3xqq+x3fV3v6yKXmjx9nXgd8JiZO4="
-      map: "sha256-K7UeLYPULqDqPqHMqNBZ3x4n3tE9X0b3p9OB1X3cFU4="
+      css: "sha256-9/Xn/kjzjk5ho0y6cE1Uxe7IC9w0WOPkr1CYnQ/nZL4="
+      js: "sha256-Z1u2Wuv7rChVCFOmcDzysUq0uvWmjB3Gn8O2KmtVO3E="
+      map: "sha256-b0l++vJEqsRJwnhi72IdSaUxhvVPP074/O8Tv4tC5Gk="
     url:
       css: "https://cdn.jsdelivr.net/npm/swiper@{{version}}/swiper-bundle.min.css"
       js: "https://cdn.jsdelivr.net/npm/swiper@{{version}}/swiper-element-bundle.min.js"
       map: "https://cdn.jsdelivr.net/npm/swiper@{{version}}/swiper-element-bundle.min.js.map"
-    version: "12.0.3"
-  swiper-map:
+    version: "12.1.0"
+  vega: # https://www.jsdelivr.com/package/npm/vega
     integrity:
-      js: "sha256-K7UeLYPULqDqPqHMqNBZ3x4n3tE9X0b3p9OB1X3cFU4="
-    url:
-      js: "https://cdn.jsdelivr.net/npm/swiper@{{version}}/swiper-element-bundle.min.js.map"
-    version: "12.0.3"
-  vega:
-    integrity:
-      js: "sha256-PuLg4lGpVq4qX3lI3F0+N4vNnIiR8Kp0bUGJEO7gqFg="
-      js_map: "sha256-Xv9X8KY/3yS4MNBo6Y0xnB3j8p5CwbdkPCJ1vZ7HVOc="
+      js: "sha256-6mpZNjgdBvkSRmNU4raiDrZsTUHxyp3/HgI23+5u45I="
     url:
       js: "https://cdn.jsdelivr.net/npm/vega@{{version}}/build/vega.min.js"
-      js_map: "https://cdn.jsdelivr.net/npm/vega@{{version}}/build/vega.min.js.map"
     version: "6.2.0"
-  vega-embed:
+  vega-embed: # https://www.jsdelivr.com/package/npm/vega-embed
     integrity:
-      js: "sha256-L5T0dTwBGbfM6/dKKE3rMQGR5O1HcZQE/KZmBgYDq+o="
-      js_map: "sha256-XjMVxOdJHxqSR2bCqo5mI9M9d/qN8qLSVPhH2S6Y1tQ="
+      js: "sha256-w2JUJwIZ7uWPubHZVN7K2VT7B7/Jq3gMXUQBvURc1Qw="
     url:
       js: "https://cdn.jsdelivr.net/npm/vega-embed@{{version}}/build/vega-embed.min.js"
-      js_map: "https://cdn.jsdelivr.net/npm/vega-embed@{{version}}/build/vega-embed.min.js.map"
     version: "7.1.0"
-  vega-lite:
+  vega-lite: # https://www.jsdelivr.com/package/npm/vega-lite
     integrity:
-      js: "sha256-0q8Sw+bfcXx7LqR7T6nQk3y/x5IJ2K3e3C0m8X5LYHU="
-      js_map: "sha256-k8S0T1cLLQlMt3Y0KpPCDQ0a6M2g5nXf6rJd0RxLCaY="
+      js: "sha256-PO9i61UrA7w95rl8gwwRGOK6ZPZiUwCIya+eD6s3BSM="
     url:
       js: "https://cdn.jsdelivr.net/npm/vega-lite@{{version}}/build/vega-lite.min.js"
-      js_map: "https://cdn.jsdelivr.net/npm/vega-lite@{{version}}/build/vega-lite.min.js.map"
     version: "6.4.2"
-  venobox:
+  venobox: # https://www.jsdelivr.com/package/npm/venobox
     integrity:
       css: "sha256-ohJEB0/WsBOdBD+gQO/MGfyJSbTUI8OOLbQGdkxD6Cg="
       js: "sha256-LsGXHsHMMmTcz3KqTaWvLv6ome+7pRiic2LPnzTfiSo="
