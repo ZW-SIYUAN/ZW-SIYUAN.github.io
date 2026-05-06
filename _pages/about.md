@@ -29,7 +29,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a first-year Ph.D. student in Data Science at [William & Mary](https://www.wm.edu/), working in the SNDM Lab under the supervision of [Prof. Yihe Dong](https://yhe15.people.wm.edu/). I received my B.S. in Computer Science and Technology from [Southwest University](https://www.swu.edu.cn/), Chongqing, China in 2024.
+I am a first-year Ph.D. student in Data Science at [William & Mary](https://www.wm.edu/), working in the SNDM Lab under the supervision of [Prof. Yi He](https://yhe15.people.wm.edu/). I received my B.S. in Computer Science and Technology from [Southwest University](https://www.swu.edu.cn/), Chongqing, China in 2024.
 
 My research lies at the intersection of machine learning and data science, with a current focus on:
 
