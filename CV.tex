@@ -1,0 +1,172 @@
+%-------------------------
+% Resume in Latex
+% Author : Zhili Wang
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure machine readability
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Zhili Wang} \\ \vspace{8pt}
+    \small 
+    \href{mailto:zwang68@wm.edu}{\underline{zwang68@wm.edu}} $|$ 
+    \href{https://github.com/ZW-SIYUAN}{\underline{github.com/ZW-SIYUAN}} $|$ 
+    \href{https://openmoa.net}{\underline{openmoa.net}} $|$
+    Williamsburg, VA, USA
+\end{center}
+
+%-----------RESEARCH INTERESTS-----------
+\section{Research Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Online Learning \& Stream Mining:} Evolving feature spaces, concept drift, and heterogeneous data streams. \\
+     \textbf{AI for Data Science:} LLM-based synthetic tabular data generation, machine learning systems.
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {College of William \& Mary}{Williamsburg, VA, USA}
+      {Ph.D. in Data Science (Advisor: Prof. Yi He)}{Aug. 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Affiliated with the \textbf{School of Computing, Data Sciences, and Physics (CDSP)}.}
+        \resumeItem{Core research focus on utilitarian online learning and data stream evolution.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Southwest University}{Chongqing, China}
+      {B.E. in Computer Science and Technology}{Sept. 2020 -- June 2024}
+      \resumeItemListStart
+        \resumeItem{Honors: University-level First-class Scholarship, University-level Second-class Scholarship.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS & MANUSCRIPTS-----------
+\section{Selected Manuscripts (Ready for Submission)}
+ \resumeSubHeadingListStart
+    \item \small{
+    \textbf{OpenMOA: A Python Library for Utilitarian Online Learning} \\
+    \textbf{Zhili Wang}, Heitor M. Gomes, Yi He \\
+    \textit{[Ready for Submission] at Journal of Machine Learning Research - Machine Learning Open Source Software (JMLR MLOSS)} \\
+    \textit{Software available at: \href{https://openmoa.net}{\underline{openmoa.net}}} \vspace{2pt}
+    }
+
+    \item \small{
+    \textbf{Online Learning from Irregular, Drifting, and Heterogeneous Streaming Data} \\
+    Di Wu, \textbf{Zhili Wang}, Xin Luo, Yi He, Guoyin Wang, Shuyin Xia \\
+    \textit{[Ready for Submission] at IEEE/CAA Journal of Automatica Sinica (JAS)}
+    }
+ \resumeSubHeadingListEnd
+
+%-----------RESEARCH & PROJECTS-----------
+\section{Research \& Project Experience}
+    \resumeSubHeadingListStart
+
+      \resumeSubheading
+      {OpenMOA Development}{Lead Developer}
+      {Python, CapyMOA Framework}{2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected and developed a specialized Python library designed for practical online learning tasks.}
+        \resumeItem{Extended the CapyMOA framework to support data streams with evolving feature spaces.}
+        \resumeItem{Implemented efficient algorithms to handle non-stationary data environment challenges.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {LLM-based Synthetic Tabular Data Generation}{Research Lead}
+      {Large Language Models, Synthetic Data}{2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Conducted a systematic review of LLM-based techniques for generating high-fidelity tabular data.}
+        \resumeItem{Reproduced representative SOTA algorithms to evaluate performance on diverse datasets.}
+        \resumeItem{Investigating novel methods to bridge the gap between LLM capabilities and structured data utility.}
+      \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages:}{ \textbf{Python}, \textbf{Vibe Coding}, SQL, C++, Bash.} \\
+     \textbf{Libraries:}{ PyTorch, Scikit-learn, NumPy, Pandas, CapyMOA, Matplotlib, Transformers.} \\
+     \textbf{Tools:}{ Git, Docker, LaTeX, Linux, VS Code, Weights \& Biases.} \\
+     \textbf{Expertise:}{ Stream Mining, Concept Drift Detection, Synthetic Data Generation.}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
