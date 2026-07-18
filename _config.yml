@@ -185,8 +185,6 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  books:
-    output: true
   news:
     defaults:
       layout: post
@@ -230,7 +228,6 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/
@@ -299,8 +296,6 @@ jekyll-archives:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["online-learning", "LLM", "deep-learning", "bayesian-methods", "transformers", "synthetic-data"] # these tags will be displayed on the front page of your blog
 display_categories: ["research", "notes"] # these categories will be displayed on the front page of your blog
