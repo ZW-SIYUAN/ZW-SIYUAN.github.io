@@ -14,6 +14,6 @@ category: research
 - Extended CapyMOA with support for data streams with evolving and heterogeneous feature spaces.
 - Implemented efficient algorithms for handling concept drift detection and adaptation.
 
-**Manuscript:** *OpenMOA: A Python Library for Utilitarian Online Learning* — Zhili Wang, Heitor M. Gomes, Yi He. Ready for submission at JMLR MLOSS.
+**Manuscript:** _OpenMOA: A Python Library for Utilitarian Online Learning_ — Zhili Wang, Heitor M. Gomes, Yi He. Under review at JMLR MLOSS.
 
 **Website:** [openmoa.net](https://openmoa.net)

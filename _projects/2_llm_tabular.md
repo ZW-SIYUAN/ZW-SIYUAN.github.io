@@ -14,4 +14,4 @@ This project investigates how large language models (LLMs) can be leveraged to g
 - Reproduced representative state-of-the-art algorithms and evaluated their performance across diverse datasets.
 - Investigating novel methods that bridge the gap between LLM generative capabilities and structured data utility, with causal relationships as a guiding principle.
 
-**Manuscript:** *Online Learning from Irregular, Drifting, and Heterogeneous Streaming Data* — Di Wu, Zhili Wang, Xin Luo, Yi He, Guoyin Wang, Shuyin Xia. Ready for submission at IEEE/CAA Journal of Automatica Sinica.
+**Manuscript:** _Online Learning from Irregular, Drifting, and Heterogeneous Streaming Data_ — Di Wu, Zhili Wang, Xin Luo, Yi He, Guoyin Wang, Shuyin Xia. Under review at IEEE/CAA Journal of Automatica Sinica.
