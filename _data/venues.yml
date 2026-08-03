@@ -1,5 +1,11 @@
 # Venue badges shown to the left of each publication.
 # `color` sets the badge background; `url` makes the badge clickable.
+#
+# Papers still under review use the neutral "In review" badge. Once one is
+# accepted, switch its `abbr` in _bibliography/papers.bib to the venue below.
+
+"In review":
+  color: "#6c757d"
 
 "AAAI":
   url: https://aaai.org/conference/aaai/
