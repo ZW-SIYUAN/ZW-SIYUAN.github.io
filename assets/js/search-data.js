@@ -57,6 +57,11 @@ ninja.data = [{
           description: "Leveraging causal structure for high-fidelity synthetic tabular data",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_llm_tabular/";
+            },},{id: "projects-online-learning-from-heterogeneous-data-streams",
+          title: 'Online Learning from Heterogeneous Data Streams',
+          description: "Learning under irregular, drifting, and heterogeneous streaming conditions",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_streaming_learning/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
