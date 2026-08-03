@@ -2,6 +2,7 @@
 layout: page
 title: LLM for Tabular Data Generation
 description: Leveraging causal structure for high-fidelity synthetic tabular data
+img: assets/img/publication_preview/dymeg.png
 importance: 2
 category: research
 ---

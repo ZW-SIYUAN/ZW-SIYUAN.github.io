@@ -2,6 +2,7 @@
 layout: page
 title: OpenMOA
 description: A Python Library for Utilitarian Online Learning
+img: assets/img/publication_preview/openmoa.png
 importance: 1
 category: research
 ---
