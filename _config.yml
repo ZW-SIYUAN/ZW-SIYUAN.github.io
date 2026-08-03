@@ -670,20 +670,7 @@ third_party_libraries:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
-
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
-  - awards
-  - certificates
-  - skills
-  - languages
-  - interests
-  - references
+# The CV is driven by _data/cv.yml via cv_format: rendercv in _pages/cv.md.
+# The JSONResume path is unused, so assets/json/resume.json and its
+# jekyll_get_json / jsonresume settings have been removed. To switch to
+# JSONResume, restore them along with a resume.json of your own.

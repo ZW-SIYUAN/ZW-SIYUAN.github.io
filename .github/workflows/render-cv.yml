@@ -1,14 +1,19 @@
 name: Render a CV
+# The automatic push trigger is disabled because RenderCV 2.8 rejects the
+# cv.label, cv.image and cv.summary fields in _data/cv.yml, while the al-folio
+# CV layout renders them as Professional Title and Professional Summary. Every
+# push that touched _data/cv.yml therefore failed this workflow.
+#
+# To generate a CV PDF, drop those three fields from _data/cv.yml (accepting
+# that the web CV loses those two sections), then restore the push trigger:
+#   push:
+#     branches: [main, master]
+#     paths:
+#       - "_data/cv.yml"
+#       - "assets/rendercv/design.yaml"
+#       - "assets/rendercv/locale.yaml"
+#       - "assets/rendercv/settings.yaml"
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - "_data/cv.yml"
-      - "assets/rendercv/design.yaml"
-      - "assets/rendercv/locale.yaml"
-      - "assets/rendercv/settings.yaml"
   workflow_call:
   workflow_dispatch:
 permissions:

@@ -36,6 +36,15 @@ cv:
           - "Honors: University-level First-class Scholarship, University-level Second-class Scholarship."
 
     Publications:
+      - title: "Dynamic Mechanism Fidelity for Nonstationary Tabular Data: Evaluation and Mechanism-Guided Generation"
+        authors:
+          - Zhili Wang
+          - Chen Zhao
+          - Yi He
+        publisher: "AAAI Conference on Artificial Intelligence (AAAI)"
+        releaseDate: 2027
+        summary: "Under review. Introduces Dynamic Mechanism Fidelity (DMF) for evaluating nonstationary tabular generation, and DyMeG, a mechanism-guided generator that routes each generation step through shared or shifted low-rank adapters."
+
       - title: "OpenMOA: A Python Library for Utilitarian Online Learning"
         authors:
           - Zhili Wang
@@ -44,7 +53,7 @@ cv:
         publisher: "Journal of Machine Learning Research – Machine Learning Open Source Software (JMLR MLOSS)"
         releaseDate: 2025
         url: https://openmoa.net
-        summary: "Ready for submission. A Python library for practical online learning tasks, extending the CapyMOA framework to support evolving feature spaces and non-stationary data streams."
+        summary: "Under review. A Python library for practical online learning tasks, extending the CapyMOA framework to support evolving feature spaces and non-stationary data streams."
 
       - title: "Online Learning from Irregular, Drifting, and Heterogeneous Streaming Data"
         authors:
@@ -56,7 +65,7 @@ cv:
           - Shuyin Xia
         publisher: "IEEE/CAA Journal of Automatica Sinica (JAS)"
         releaseDate: 2025
-        summary: "Ready for submission."
+        summary: "Under review."
 
     Experience:
       - company: OpenMOA Project
