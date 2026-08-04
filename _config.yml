@@ -129,7 +129,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Zhili Wang's Blog # blog_name will be displayed in your blog page
-blog_description: A space to document my research journey in data science and machine learning
+blog_description: Notes from my research in data science and machine learning, and what I take away from the books I read
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -297,8 +297,10 @@ jekyll-archives:
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
 
-display_tags: ["online-learning", "LLM", "deep-learning", "bayesian-methods", "transformers", "synthetic-data"] # these tags will be displayed on the front page of your blog
-display_categories: ["research", "notes"] # these categories will be displayed on the front page of your blog
+# Only list tags and categories that actually have posts. Archive pages are
+# generated per used tag/category, so listing an unused one renders a dead link.
+display_tags: ["psychology", "adlerian-psychology", "book-notes"]
+display_categories: ["reading"]
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
