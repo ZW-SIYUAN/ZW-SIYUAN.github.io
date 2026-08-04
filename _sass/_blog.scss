@@ -31,6 +31,27 @@
       color: var(--global-text-color-light);
     }
   }
+
+  // post count next to each auto-derived tag and category
+  .tag-count {
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+    vertical-align: super;
+  }
+}
+
+.archive-link {
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+
+  a {
+    color: var(--global-text-color-light);
+
+    &:hover {
+      color: var(--global-theme-color);
+    }
+  }
 }
 
 .post-title {

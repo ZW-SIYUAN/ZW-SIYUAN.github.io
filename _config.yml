@@ -297,10 +297,9 @@ jekyll-archives:
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
 
-# Only list tags and categories that actually have posts. Archive pages are
-# generated per used tag/category, so listing an unused one renders a dead link.
-display_tags: ["psychology", "adlerian-psychology", "book-notes"]
-display_categories: ["reading"]
+# display_tags / display_categories are intentionally gone. _pages/blog.md now
+# derives both from site.tags and site.categories, so the lists stay in sync
+# with the posts automatically and cannot reference a missing archive page.
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

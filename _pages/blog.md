@@ -8,7 +8,7 @@ pagination:
   enabled: true
   collection: posts
   permalink: /page/:num/
-  per_page: 5
+  per_page: 12
   sort_field: date
   sort_reverse: true
   trail:
@@ -29,30 +29,47 @@ pagination:
   </div>
   {% endif %}
 
-{% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
+<!--
+  Tags and categories are derived from the posts themselves via site.tags and
+  site.categories, so they never need maintaining by hand and can never point
+  at an archive page that was not generated.
+-->
+
+{% assign sorted_categories = site.categories | sort %}
+{% assign sorted_tags = site.tags | sort %}
+
+{% if sorted_tags.size > 0 or sorted_categories.size > 0 %}
 
   <div class="tag-category-list">
     <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
+      {% for category in sorted_categories %}
         <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
+          <i class="fa-solid fa-tag fa-sm"></i>
+          <a href="{{ category[0] | slugify | prepend: '/blog/category/' | relative_url }}">{{ category[0] }}</a>
+          <span class="tag-count">{{ category[1].size }}</span>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
         {% endunless %}
       {% endfor %}
-      {% if site.display_categories.size > 0 and site.display_tags.size > 0 %}
+      {% if sorted_categories.size > 0 and sorted_tags.size > 0 %}
         <p>&bull;</p>
       {% endif %}
-      {% for category in site.display_categories %}
+      {% for tag in sorted_tags %}
         <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+          <i class="fa-solid fa-hashtag fa-sm"></i>
+          <a href="{{ tag[0] | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag[0] }}</a>
+          <span class="tag-count">{{ tag[1].size }}</span>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
         {% endunless %}
       {% endfor %}
     </ul>
+  </div>
+
+  <div class="archive-link">
+    <a href="{{ '/blog/archive/' | relative_url }}"><i class="fa-solid fa-list-ul fa-sm"></i> Browse all {{ site.posts.size }} posts</a>
   </div>
   {% endif %}
 
