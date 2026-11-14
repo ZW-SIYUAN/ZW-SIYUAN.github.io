@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Course materials, schedules, and resources for classes taught.
+description: Teaching and teaching assistant experience at William & Mary.
 nav: true
 nav_order: 6
 ---

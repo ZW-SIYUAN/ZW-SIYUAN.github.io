@@ -20,6 +20,7 @@ nav: false
 {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 {% for year in posts_by_year %}
+
 <section class="archive-year" data-year="{{ year.name }}">
 <h2 class="archive-year-heading">{{ year.name }}</h2>
 <ul class="archive-list">

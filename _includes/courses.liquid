@@ -13,12 +13,18 @@
             </h3>
 
             <div class="course-meta">
+              {% if course.role %}
+                <span class="course-role">{{ course.role }}</span>
+              {% endif %}
+              {% if course.course_code %}
+                <span class="course-code">{{ course.course_code }}</span>
+              {% endif %}
               {% if course.term %}
                 <span class="course-term">{{ course.term }}</span>
               {% endif %}
 
               {% if course.instructor %}
-                <span class="course-instructor">{{ course.instructor }}</span>
+                <span class="course-instructor">Instructor: {{ course.instructor }}</span>
               {% endif %}
             </div>
 

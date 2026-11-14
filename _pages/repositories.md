@@ -2,46 +2,28 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: My GitHub profile and selected repositories.
+description: Research software and tools for online learning, synthetic data, and paper discovery.
 nav: true
 nav_order: 4
 ---
 
 {% if site.data.repositories.github_users %}
 
-## GitHub users
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+<div class="repository-profiles">
   {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.liquid username=user %}
+    <a href="https://github.com/{{ user }}"><i class="fa-brands fa-github" aria-hidden="true"></i> github.com/{{ user }}</a>
   {% endfor %}
 </div>
-
----
-
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-{% if site.data.repositories.github_users.size > 1 %}
-
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.liquid username=user %}
-  </div>
-
----
-
-{% endfor %}
-{% endif %}
 {% endif %}
 
-{% if site.data.repositories.github_repos %}
-
-## GitHub Repositories
-
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+<div class="repository-grid">
   {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.liquid repository=repo %}
+    {% assign details = site.data.repositories.details[repo] %}
+    {% assign repo_name = repo | split: '/' | last %}
+    <article class="repository-card">
+      <h2><a href="https://github.com/{{ repo }}">{{ details.title | default: repo_name }}</a></h2>
+      {% if details.description %}<p>{{ details.description }}</p>{% endif %}
+      <a class="repository-link" href="https://github.com/{{ repo }}">View on GitHub <span aria-hidden="true">&rarr;</span></a>
+    </article>
   {% endfor %}
 </div>
-{% endif %}

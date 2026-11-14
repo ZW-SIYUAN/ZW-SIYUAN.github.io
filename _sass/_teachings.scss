@@ -15,7 +15,7 @@
 
 .course-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 20px;
 }
 
@@ -38,14 +38,24 @@
 }
 
 .course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
   font-size: 0.9rem;
   color: var(--global-text-color-light);
   margin-bottom: 10px;
 }
 
 .course-term,
-.course-instructor {
-  margin-right: 15px;
+.course-instructor,
+.course-code,
+.course-role {
+  display: inline-block;
+}
+
+.course-role {
+  font-weight: 500;
+  color: var(--global-theme-color);
 }
 
 .course-description {
