@@ -7,6 +7,7 @@ subtitle: PhD Student in Data Science · <a href='https://www.wm.edu/'>William &
 profile:
   align: right
   image: my_photo.jpg
+  image_alt: Zhili Wang
   image_circular: false # crops the image to make it circular
   width: 200px
   more_info: >
@@ -29,9 +30,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a first-year Ph.D. student in Data Science at [William & Mary](https://www.wm.edu/), working in the SNDM Lab under the supervision of [Prof. Yi He](https://yhe15.people.wm.edu/). I received my B.S. in Computer Science and Technology from [Southwest University](https://www.swu.edu.cn/), Chongqing, China in 2024.
+I am a Ph.D. student in Data Science at [William & Mary](https://www.wm.edu/), where I joined the SNDM Lab in Fall 2025 under the supervision of [Prof. Yi He](https://yhe15.people.wm.edu/). I received my B.E. in Computer Science and Technology from [Southwest University](https://www.swu.edu.cn/), Chongqing, China in 2024.
 
-My research lies at the intersection of machine learning and data science, with a current focus on:
+I work on learning from evolving data and generating reliable synthetic tables, with a focus on:
 
-- **Utilitarian Online Learning and Streaming Data** — designing learning algorithms that operate efficiently under real-time, resource-constrained, and non-stationary settings.
-- **LLM for Tabular Data Generation via Causal Structure** — leveraging large language models to generate high-fidelity tabular data guided by underlying causal relationships.
+- **Online Learning and Data Streams** — learning under concept drift, evolving feature spaces, and heterogeneous streaming conditions.
+- **Reliable LLM-Based Tabular Synthesis** — preserving causal mechanisms across environments and enforcing row-level constraints during generation.

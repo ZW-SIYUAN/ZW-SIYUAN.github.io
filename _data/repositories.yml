@@ -8,3 +8,17 @@ github_repos:
   - ZW-SIYUAN/OLIDHSD
   - ZW-SIYUAN/Tabular-Data-Generation-via-LLM-under-Causal-Structure-Constraint
   - ZW-SIYUAN/PaperPilot
+
+details:
+  ZW-SIYUAN/OpenMOA:
+    title: OpenMOA
+    description: A Python library for utilitarian online learning with evolving feature spaces and non-stationary data streams.
+  ZW-SIYUAN/OLIDHSD:
+    title: Online Learning from Heterogeneous Data Streams
+    description: Research code for online learning from irregular, drifting, and heterogeneous streaming data.
+  ZW-SIYUAN/Tabular-Data-Generation-via-LLM-under-Causal-Structure-Constraint:
+    title: LLM-Based Tabular Data Generation
+    description: Research on synthetic tabular data generation guided by causal structure.
+  ZW-SIYUAN/PaperPilot:
+    title: PaperPilot
+    description: An AI-powered research assistant that discovers, filters, and summarizes newly published papers using user-defined keywords.

@@ -1,28 +1,45 @@
 ---
 ---
 
-@inproceedings{wang2027dymeg,
-  title     = {Dynamic Mechanism Fidelity for Nonstationary Tabular Data: Evaluation and Mechanism-Guided Generation},
-  author    = {Wang, Zhili and Zhao, Chen and He, Yi},
-  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
-  year      = {2027},
-  abbr      = {In review},
-  note      = {Under review},
-  preview   = {dymeg.png},
-  abstract  = {Large Language Model (LLM)-based tabular generators now prevail, while structural-fidelity metrics have expanded evaluation beyond density estimation, sample-level copying risk, and machine learning utility. However, both generation and evaluation remain largely limited to stationary data from a single environment. Real tabular data often span multiple environments, where local data-generating mechanisms may vary sparsely across domains, time periods, or operating conditions. Existing generators provide limited control over such environment-specific variation, and existing metrics cannot adequately assess whether it is preserved. We address this problem under a shared causal graph with sparse soft mechanism shifts. We first introduce Dynamic Mechanism Fidelity (DMF), which evaluates nonstationary tabular generation along three axes, namely, environment-wise fidelity, shift-support fidelity, and shift-profile fidelity. Each axis pairs an oracle metric based on ground truth with a practical counterpart applicable without mechanism annotations. We then propose Dynamic Mechanism-Guided Generation (DyMeG), which translates these fidelity requirements into a target-context-value generation paradigm. DyMeG localizes each generation step with predictive contexts and selectively routes it through shared or shifted low-rank adapters using residual-distribution tests. We validate DMF using 144 positive-shift cases across eight diagnostic regimes and six generators. The practical metrics preserve oracle-induced rankings, with Spearman correlations of 0.802--0.956. Against three LLM-based baselines, DyMeG leads all six DMF metrics on controlled structural causal models and maintains low false-positive rates on nine no-shift controls. DyMeG further improves reference-based shift-profile fidelity on real multi-environment tables and achieves stronger Shape and Trend fidelity with competitive utility on stationary real tables.},
-  selected  = {true}
-}
-
 @article{wang2025openmoa,
-  title    = {OpenMOA: A Python Library for Utilitarian Online Learning},
+  title    = {{OpenMOA}: A Python Library for Utilitarian Online Learning},
   author   = {Wang, Zhili and Gomes, Heitor M. and He, Yi},
   journal  = {Journal of Machine Learning Research -- Machine Learning Open Source Software},
   year     = {2025},
   abbr     = {In review},
   note     = {Under review},
+  review_venue = {JMLR -- Machine Learning Open Source Software},
   url      = {https://openmoa.net},
+  website  = {https://openmoa.net},
+  code     = {https://github.com/ZW-SIYUAN/OpenMOA},
   preview  = {openmoa.png},
   selected = {true}
+}
+
+@inproceedings{wang2027dymeg,
+  title     = {Dynamic Mechanism Fidelity for Nonstationary Tabular Data: Evaluation and Mechanism-Guided Generation},
+  author    = {Wang, Zhili and Zhao, Chen and He, Yi},
+  booktitle = {AAAI Conference on Artificial Intelligence (AAAI)},
+  year      = {2027},
+  abbr      = {In review},
+  note      = {Under review},
+  review_venue = {AAAI 2027},
+  preview   = {dymeg.png},
+  abstract  = {Large Language Model (LLM)-based tabular generators now prevail, while structural-fidelity metrics have expanded evaluation beyond density estimation, sample-level copying risk, and machine learning utility. However, both generation and evaluation remain largely limited to stationary data from a single environment. Real tabular data often span multiple environments, where local data-generating mechanisms may vary sparsely across domains, time periods, or operating conditions. Existing generators provide limited control over such environment-specific variation, and existing metrics cannot adequately assess whether it is preserved. We address this problem under a shared causal graph with sparse soft mechanism shifts. We first introduce Dynamic Mechanism Fidelity (DMF), which evaluates nonstationary tabular generation along three axes, namely, environment-wise fidelity, shift-support fidelity, and shift-profile fidelity. Each axis pairs an oracle metric based on ground truth with a practical counterpart applicable without mechanism annotations. We then propose Dynamic Mechanism-Guided Generation (DyMeG), which translates these fidelity requirements into a target-context-value generation paradigm. DyMeG localizes each generation step with predictive contexts and selectively routes it through shared or shifted low-rank adapters using residual-distribution tests. We validate DMF using 144 positive-shift cases across eight diagnostic regimes and six generators. The practical metrics preserve oracle-induced rankings, with Spearman correlations of 0.802--0.956. Against three LLM-based baselines, DyMeG leads all six DMF metrics on controlled structural causal models and maintains low false-positive rates on nine no-shift controls. DyMeG further improves reference-based shift-profile fidelity on real multi-environment tables and achieves stronger Shape and Trend fidelity with competitive utility on stationary real tables.},
+  selected  = {true}
+}
+
+@inproceedings{wang2027tabcd,
+  title     = {From Rules to Rows: Exact Constrained Decoding for {LLM}-Based Tabular Synthesis},
+  author    = {Wang, Zhili and Gomes, Heitor Murilo and Zhu, Xingquan and He, Yi},
+  booktitle = {IEEE International Conference on Data Engineering (ICDE)},
+  year      = {2027},
+  abbr      = {In review},
+  note      = {Under review},
+  review_venue = {ICDE 2027 (Round 2)},
+  preview   = {tabcd.png},
+  abstract  = {Tables generated by large language models (LLMs) can score well on statistical quality metrics even when individual rows violate hard constraints. Enforcing these constraints during decoding requires checking which candidate tokens still permit a legal completion of the row, and repeated solver queries can make synthesis costly. We propose TabCD, an LLM-based Tabular data generator with exact Constraint Decoding. Given a partial row, TabCD computes the set of values for the current field that admit a legal completion and uses this set to mask infeasible tokens before sampling. It also reuses feasible value sets and within-field token checks across decoding steps and rows to uplift generation efficiency. With TabCD, all six tabular generators meet their quotas with zero constraint violations using their existing parameters and vocabularies. TabCD improves the mean of all four statistical quality metrics across 17 datasets and has the shortest synthesis time among the three constraint methods in 14 of the 20 rule configurations.},
+  selected  = {true}
 }
 
 @article{wu2025online,
@@ -32,5 +49,6 @@
   year    = {2025},
   abbr    = {In review},
   note    = {Under review},
+  review_venue = {IEEE/CAA Journal of Automatica Sinica},
   preview = {jas.png}
 }

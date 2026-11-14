@@ -7,12 +7,12 @@ importance: 2
 category: research
 ---
 
-This project investigates how large language models (LLMs) can be leveraged to generate high-fidelity synthetic tabular data, guided by the underlying causal structure of the data.
+This project studies synthetic tabular data that span multiple environments, where some data-generating mechanisms change while others remain shared.
 
-**Key activities:**
+**Research contributions:**
 
-- Conducted a systematic review of LLM-based techniques for synthetic tabular data generation.
-- Reproduced representative state-of-the-art algorithms and evaluated their performance across diverse datasets.
-- Investigating novel methods that bridge the gap between LLM generative capabilities and structured data utility, with causal relationships as a guiding principle.
+- **Dynamic Mechanism Fidelity (DMF):** evaluates environment-wise fidelity, shift-support fidelity, and shift-profile fidelity, pairing oracle metrics with practical counterparts.
+- **Dynamic Mechanism-Guided Generation (DyMeG):** uses predictive contexts and selectively routes generation through shared or shifted low-rank adapters.
+- **Evaluation:** controlled structural causal models and real multi-environment tables test whether generators preserve mechanism changes.
 
 **Manuscript:** _Dynamic Mechanism Fidelity for Nonstationary Tabular Data: Evaluation and Mechanism-Guided Generation_ — Zhili Wang, Chen Zhao, Yi He. Under review at AAAI 2027.

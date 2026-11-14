@@ -38,7 +38,7 @@
             class="preview z-depth-1 rounded"
             zoomable=true
             avoid_scaling=true
-            alt=entry.preview
+            alt=entry.title
           %}
         {% endif %}
       {% endif %}
@@ -181,7 +181,11 @@
     {% assign entrytype_text = entrytype | strip_html | strip %}
     {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
     <div class="periodical">
-      {{ periodical | strip }}
+      {% if entry.review_venue %}
+        <em>Submitted to {{ entry.review_venue }}</em>
+      {% else %}
+        {{ periodical | strip }}
+      {% endif %}
     </div>
     <div class="periodical">
       {{ entry.note | strip }}
@@ -381,7 +385,7 @@
       <div class="bibtex hidden">
         {% highlight bibtex %}
         {{- entry.bibtex | hideCustomBibtex -}}
-      {% endhighlight %}
+        {% endhighlight %}
       </div>
     {% endif %}
 
