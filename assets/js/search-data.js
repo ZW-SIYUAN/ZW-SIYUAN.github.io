@@ -80,6 +80,11 @@ ninja.data = [{
           description: "Learning under irregular, drifting, and heterogeneous streaming conditions",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_streaming_learning/";
+            },},{id: "projects-tabcd",
+          title: 'TabCD',
+          description: "Exact constrained decoding for LLM-based tabular synthesis",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/tabcd/";
             },},{id: "teachings-computational-foundations-of-data-science",
           title: 'Computational Foundations of Data Science',
           description: "Prepare selected course slides, lead lab sessions, grade homework and lab assignments, and answer students&#39; questions.",
