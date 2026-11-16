@@ -4,12 +4,16 @@ github_users:
 repo_description_lines_max: 2
 
 github_repos:
+  - ZW-SIYUAN/TabCD
   - ZW-SIYUAN/OpenMOA
   - ZW-SIYUAN/OLIDHSD
   - ZW-SIYUAN/Tabular-Data-Generation-via-LLM-under-Causal-Structure-Constraint
   - ZW-SIYUAN/PaperPilot
 
 details:
+  ZW-SIYUAN/TabCD:
+    title: TabCD
+    description: Exact constrained decoding for LLM-based tabular synthesis, with rule compilation, exact projections, native-token masks, and reuse.
   ZW-SIYUAN/OpenMOA:
     title: OpenMOA
     description: A Python library for utilitarian online learning with evolving feature spaces and non-stationary data streams.
