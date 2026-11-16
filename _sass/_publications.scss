@@ -69,10 +69,16 @@
       }
 
       .title {
-        font-weight: bolder;
+        font-size: 1.025rem;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
       }
 
       .author {
+        font-size: 0.9375rem;
+        line-height: 1.65;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -101,6 +107,9 @@
 
       .links {
         a.btn {
+          font-size: 0.75rem;
+          font-weight: 500;
+          line-height: 1.4;
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
           padding-left: 1rem;
@@ -138,7 +147,7 @@
         font-size: 0.875rem;
         max-height: 0px;
         overflow: hidden;
-        text-align: justify;
+        text-align: left;
         transition-property: 0.15s ease;
         -moz-transition: 0.15s ease;
         -ms-transition: 0.15s ease;
@@ -146,7 +155,7 @@
         transition: all 0.15s ease;
 
         p {
-          line-height: 1.4em;
+          line-height: 1.7;
           margin: 10px;
         }
 
@@ -181,6 +190,11 @@
       border-color: var(--global-highlight-color);
     }
   }
+}
+
+.publications .periodical {
+  font-size: 0.9rem;
+  line-height: 1.65;
 }
 
 .citation,

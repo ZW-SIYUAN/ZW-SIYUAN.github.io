@@ -96,6 +96,7 @@ ul.task-list input[type="checkbox"] {
   flex-wrap: wrap;
   gap: 0.5rem 1.25rem;
   margin-top: 1rem;
+  font-size: 0.9375rem;
 
   a {
     font-weight: 500;
@@ -112,7 +113,7 @@ ul.task-list input[type="checkbox"] {
 
   .about-bio {
     min-width: 0;
-    line-height: 1.65;
+    line-height: 1.75;
 
     li + li {
       margin-top: 0.75rem;
