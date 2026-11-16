@@ -45,6 +45,17 @@ cv:
         releaseDate: 2027
         summary: "Under review. Introduces Dynamic Mechanism Fidelity (DMF) for evaluating nonstationary tabular generation, and DyMeG, a mechanism-guided generator that routes each generation step through shared or shifted low-rank adapters."
 
+      - title: "From Rules to Rows: Exact Constrained Decoding for LLM-Based Tabular Synthesis"
+        authors:
+          - Zhili Wang
+          - Heitor Murilo Gomes
+          - Xingquan Zhu
+          - Yi He
+        publisher: "IEEE International Conference on Data Engineering (ICDE)"
+        releaseDate: 2027
+        url: https://zw-siyuan.github.io/projects/tabcd/
+        summary: "Under review (ICDE 2027, Round 2). Introduces TabCD, exact constrained decoding for LLM-based tabular synthesis that masks infeasible tokens and reuses feasibility checks to enforce row-level constraints efficiently."
+
       - title: "OpenMOA: A Python Library for Utilitarian Online Learning"
         authors:
           - Zhili Wang
