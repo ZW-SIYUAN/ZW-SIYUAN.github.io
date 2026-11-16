@@ -46,12 +46,9 @@ function getCurrentScrollPosition() {
 }
 
 function initializeProgressElement() {
-  let navbarHeight = $("#navbar").outerHeight(true);
-  $("body").css({ "padding-top": navbarHeight });
-  $("progress-container").css({ "padding-top": navbarHeight });
-  progressBar.css({ top: navbarHeight });
+  // Navbar spacing is reserved by CSS before the page is painted.
   progressBar.attr({
-    max: getDistanceToScroll(),
+    max: Math.max(1, getDistanceToScroll()),
     value: getCurrentScrollPosition(),
   });
 }

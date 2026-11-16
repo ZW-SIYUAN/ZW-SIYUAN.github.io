@@ -7,6 +7,8 @@ subtitle: PhD Student in Data Science · <a href='https://www.wm.edu/'>William &
 profile:
   align: right
   image: my_photo.jpg
+  image_width: 1280
+  image_height: 1280
   image_alt: Zhili Wang
   image_circular: false # crops the image to make it circular
   width: 200px

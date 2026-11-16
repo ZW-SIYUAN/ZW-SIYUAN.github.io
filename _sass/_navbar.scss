@@ -5,6 +5,7 @@
 @use "variables" as v;
 
 .navbar {
+  min-height: var(--navbar-height);
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);

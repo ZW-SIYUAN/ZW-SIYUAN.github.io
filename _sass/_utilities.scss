@@ -118,7 +118,11 @@ html.transition,
 html.transition *,
 html.transition *:before,
 html.transition *:after {
-  transition: all 750ms !important;
+  // Theme changes should never animate layout, image sizes, or positioning.
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease !important;
   transition-delay: 0 !important;
 }
 

@@ -43,7 +43,7 @@ layout: default
             {% capture sizes %}(min-width: 768px) 240px, 120px{% endcapture %}
             {%
               include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile_image_alt
-              cache_bust=true
+              width=page.profile.image_width height=page.profile.image_height cache_bust=true
             %}
           {% endif %}
           {% if page.profile.more_info %}
