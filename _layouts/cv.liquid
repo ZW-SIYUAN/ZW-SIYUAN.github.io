@@ -22,13 +22,14 @@ layout: default
           {% if page.cv_pdf contains '://' %}
             href="{{ page.cv_pdf }}"
           {% else %}
-            href="{{ page.cv_pdf | relative_url }}"
+            href="{{ page.cv_pdf | relative_url | bust_file_cache }}"
           {% endif %}
           target="_blank"
           rel="noopener noreferrer"
-          class="float-right"
+          class="btn btn-sm z-depth-0 float-right mt-2"
+          aria-label="Download CV as PDF"
         >
-          <i class="fa-solid fa-file-pdf"></i>
+          <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download PDF
         </a>
       {% endif %}
     </h1>

@@ -98,6 +98,10 @@ cv:
           - Reproduced representative SOTA algorithms to evaluate performance on diverse datasets.
           - Investigating novel methods to bridge the gap between LLM capabilities and structured data utility.
 
+    Teaching:
+      - label: "Teaching Assistant - Fall 2026"
+        details: "William & Mary, Computational Foundations of Data Science (DATA601-02-F26). Instructor: Prof. Yi He. Prepare selected course slides, lead lab sessions, grade homework and lab assignments, and answer students' course and lab questions."
+
     Skills:
       - name: Programming Languages
         level: Advanced
@@ -112,7 +116,7 @@ cv:
       - name: Tools & Platforms
         level: Advanced
         icon: fa-solid fa-wrench
-        keywords: "Git, Docker, LaTeX, Linux, VS Code, Weights & Biases"
+        keywords: "Git, Docker, LaTeX, Linux, VS Code, Weights & Biases, AI-assisted coding"
 
     Languages:
       - name: Chinese
