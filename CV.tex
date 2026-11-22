@@ -14,10 +14,15 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Zhili Wang - Curriculum Vitae}, pdfauthor={Zhili Wang}}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{needspace}
+\ifdefined\pdfgentounicode
+  \input{glyphtounicode}
+  \pdfgentounicode=1
+\fi
 
 %----------FONT OPTIONS----------
 % \usepackage[sfdefault]{roboto}
@@ -29,6 +34,7 @@
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
+\fancyfoot[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -43,14 +49,12 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+\setlength{\footskip}{20pt}
 
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure machine readability
-\pdfgentounicode=1
 
 %-------------------------
 % Custom commands
@@ -61,6 +65,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
+  \Needspace{7\baselineskip}
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -80,9 +85,10 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Zhili Wang} \\ \vspace{8pt}
+    \textbf{\Huge Zhili Wang} \\ \vspace{8pt}
     \small 
     \href{mailto:zwang68@wm.edu}{\underline{zwang68@wm.edu}} $|$ 
+    \href{https://zw-siyuan.github.io/}{\underline{zw-siyuan.github.io}} \\ \vspace{2pt}
     \href{https://github.com/ZW-SIYUAN}{\underline{github.com/ZW-SIYUAN}} $|$ 
     \href{https://openmoa.net}{\underline{openmoa.net}} $|$
     Williamsburg, VA, USA
@@ -117,23 +123,43 @@
   \resumeSubHeadingListEnd
 
 %-----------PUBLICATIONS & MANUSCRIPTS-----------
-\section{Selected Manuscripts (Ready for Submission)}
+\section{Manuscripts Under Review}
  \resumeSubHeadingListStart
+    \Needspace{5\baselineskip}
+    \item \small{
+    \textbf{Dynamic Mechanism Fidelity for Nonstationary Tabular Data: Evaluation and Mechanism-Guided Generation} \\
+    \textbf{Zhili Wang}, Chen Zhao, Yi He \\
+    \textit{Under review at AAAI Conference on Artificial Intelligence (AAAI 2027).}
+    }
+
+    \Needspace{5\baselineskip}
+    \item \small{
+    \textbf{From Rules to Rows: Exact Constrained Decoding for LLM-Based Tabular Synthesis} \\
+    \textbf{Zhili Wang}, Heitor Murilo Gomes, Xingquan Zhu, Yi He \\
+    \textit{Under review at IEEE International Conference on Data Engineering (ICDE 2027, Round 2).} \\
+    \textit{Project: \href{https://zw-siyuan.github.io/projects/tabcd/}{\underline{zw-siyuan.github.io/projects/tabcd/}}}
+    }
+
+    \Needspace{5\baselineskip}
     \item \small{
     \textbf{OpenMOA: A Python Library for Utilitarian Online Learning} \\
     \textbf{Zhili Wang}, Heitor M. Gomes, Yi He \\
-    \textit{[Ready for Submission] at Journal of Machine Learning Research - Machine Learning Open Source Software (JMLR MLOSS)} \\
+    \textit{Under review at Journal of Machine Learning Research - Machine Learning Open Source Software (JMLR MLOSS).} \\
     \textit{Software available at: \href{https://openmoa.net}{\underline{openmoa.net}}} \vspace{2pt}
     }
 
+    \Needspace{5\baselineskip}
     \item \small{
     \textbf{Online Learning from Irregular, Drifting, and Heterogeneous Streaming Data} \\
     Di Wu, \textbf{Zhili Wang}, Xin Luo, Yi He, Guoyin Wang, Shuyin Xia \\
-    \textit{[Ready for Submission] at IEEE/CAA Journal of Automatica Sinica (JAS)}
+    \textit{Under review at IEEE/CAA Journal of Automatica Sinica (JAS).}
     }
  \resumeSubHeadingListEnd
 
 %-----------RESEARCH & PROJECTS-----------
+\newpage
+\noindent\textbf{Zhili Wang}\hfill\textit{Curriculum Vitae}
+
 \section{Research \& Project Experience}
     \resumeSubHeadingListStart
 
@@ -157,13 +183,26 @@
 
     \resumeSubHeadingListEnd
 
+%-----------TEACHING EXPERIENCE-----------
+\section{Teaching Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {William \& Mary}{Williamsburg, VA, USA}
+      {Teaching Assistant, Computational Foundations of Data Science}{Fall 2026}
+      \resumeItemListStart
+        \resumeItem{\textbf{Course:} DATA601-02-F26. \textbf{Instructor:} Prof. Yi He.}
+        \resumeItem{Prepare selected course slides and lead lab sessions.}
+        \resumeItem{Grade homework and lab assignments, and answer students' course and lab questions.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages:}{ \textbf{Python}, \textbf{Vibe Coding}, SQL, C++, Bash.} \\
+     \textbf{Languages:}{ Python, SQL, C++, Bash.} \\
      \textbf{Libraries:}{ PyTorch, Scikit-learn, NumPy, Pandas, CapyMOA, Matplotlib, Transformers.} \\
-     \textbf{Tools:}{ Git, Docker, LaTeX, Linux, VS Code, Weights \& Biases.} \\
+     \textbf{Tools \& Practices:}{ Git, Docker, LaTeX, Linux, VS Code, Weights \& Biases, AI-assisted coding.} \\
      \textbf{Expertise:}{ Stream Mining, Concept Drift Detection, Synthetic Data Generation.}
     }}
  \end{itemize}

@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "Education, publications, research experience, and technical skills.",
+          description: "Education, publications, research and teaching experience, and technical skills.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -91,6 +91,13 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/teaching/2026-fall-data601/";
             },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/Zhili_Wang_CV.pdf", "_blank");
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
