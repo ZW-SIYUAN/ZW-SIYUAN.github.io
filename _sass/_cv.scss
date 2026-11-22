@@ -218,3 +218,14 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+.post-header .cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--global-divider-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-transform: none;
+}
